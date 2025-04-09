@@ -1,269 +1,268 @@
 html {
-    background-color: #033989;
+  background-color: #033989;
 }
 
 
 body {
-    background-color: #f0f0f0;
-    max-width: 1200px;
-    margin: auto;
-    font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
 }
 
 
 header {
-  width: 100%;
-  height: 30px;
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: #f0f0f0;
-  border-bottom: 2px solid #033989;
-  padding: 10px 0;
-  position: relative;
+width: 100%;
+height: 30px;
+overflow: hidden;
+white-space: nowrap;
+background-color: #f0f0f0;
+border-bottom: 2px solid #033989;
+padding: 10px 0;
+position: relative;
 }
 
 header h1{
-  display: inline-block;
-  padding-left: 100%;
-  animation: scroll-title 18s linear infinite;
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 300;
-  color: #033989;
-  margin: 0;
+display: inline-block;
+padding-left: 100%;
+animation: scroll-title 18s linear infinite;
+font-family: "Roboto", sans-serif;
+font-size: 18px;
+font-style: italic;
+font-weight: 300;
+color: #033989;
+margin: 0;
 }
 
 
 
 @keyframes scroll-title {
-    0% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(0%);
   }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 .grid-layout {
-    display: grid;
-    background-color: #f0f0f0;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
-    align-items: start;
-    padding: 20px;
-    height: 1200px;
-    margin-top: 10px;
+  display: grid;
+  background-color: #f0f0f0;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: start;
+  padding: 20px;
+  height: 1200px;
+  margin-top: 10px;
 }
 
 
 #banner {
-    position: relative;
-    width: 100%;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 #banner img {
-    margin-top: 100px;
-    margin-left: 100px;
-    max-width: 100%;
-    height: auto;
+  margin-top: 100px;
+  margin-left: 100px;
+  max-width: 100%;
+  height: auto;
 }
 
 .grid-sections {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    margin-top: 100px;
-    margin-left: 80px;
-  }
-  
-  .grid-sections section {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border: 2px solid #033989;
-    position: relative;
-    min-height:250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow: hidden;
-  }
-
-  
-.section-number {
-    position: absolute;
-    font-family: "Londrina Shadow", sans-serif;
-    color: #033989;
-    font-size: 30px;
-    bottom: 10px;
-    left: 20px;
-    font-size: 40px;
-    margin: 0;
-  }
-
-  .section-content{
-    margin-left: 80px;
-  }
-
-  .section-content h3{
-    font-family:"Roboto", sans-serif ;
-    color: #033989;
-    font-weight: 300px;
-    font-size: 20px;
-  }
-  
-
-  a{
-    text-decoration: none;
-    color: #033989;
-  }
-
-  a:hover{
-    font-family:"Roboto", sans-serif ;
-    color: #EA5031;
-    text-decoration: underline;
-  }
-
-
-  nav ol, nav ul {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  margin-top: 100px;
+  margin-left: 80px;
 }
-  
-  .grid-sections section {
-    border: 0;
-    box-sizing: border-box;
-  }
-  
-  .grid-sections section:nth-child(1),
-  .grid-sections section:nth-child(2) {
-    border-bottom: 1.5px solid #033989; 
-  }
-  
-  .grid-sections section:nth-child(1),
-  .grid-sections section:nth-child(3) {
-    border-right: 1.5px solid #033989; 
-  }
-  
-  /* 背景色整体切换 */
-body.dark-mode {
-    background-color: #EA5031;
-    color: #f0f0f0;
-  }
 
-  html.dark-mode{
-    background-color: #f0f0f0;
-  }
-  
-  /* header */
-  body.dark-mode header {
-    background-color: #EA5031;
-    border-bottom: 2px solid #033989;
-  }
+.grid-sections section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 2px solid #033989;
+  position: relative;
+  min-height:250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
 
-  /* grid layout 区域背景 */
-  body.dark-mode .grid-layout {
-    background-color: #033989;
-  }
-  
-  /* grid section box */
-  body.dark-mode .grid-sections section {
-    background-color: #033989;
-    border-color: #EA5031;
-  }
-  
-  /* 标题 / section number */
-  body.dark-mode .section-number,
-  body.dark-mode .section-content h3 {
-    color: #EA5031;
-  }
-  
-  /* 普通链接 */
-  body.dark-mode a {
-    color: #EA5031;
-  }
-  
-  body.dark-mode a:hover {
-    color: #f0f0f0;
-    text-decoration: underline;
-  }
 
-  #banner h2,
-#banner h4 {
+.section-number {
   position: absolute;
-  font-family: "Roboto", sans-serif;
+  font-family: "Londrina Shadow", sans-serif;
+  color: #033989;
+  font-size: 30px;
+  bottom: 10px;
+  left: 20px;
+  font-size: 40px;
+  margin: 0;
+}
+
+.section-content{
+  margin-left: 80px;
+}
+
+.section-content h3{
+  font-family:"Roboto", sans-serif ;
+  color: #033989;
+  font-weight: 300px;
+  font-size: 20px;
+}
+
+
+a{
+  text-decoration: none;
+  color: #033989;
+}
+
+a:hover{
+  font-family:"Roboto", sans-serif ;
   color: #EA5031;
-  font-size: 70px;
-  font-weight: 800;
-  z-index: 1;
-  transition: transform 0.8s ease, opacity 0.6s ease;
+  text-decoration: underline;
+}
+
+
+nav ol, nav ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.grid-sections section {
+  border: 0;
+  box-sizing: border-box;
+}
+
+.grid-sections section:nth-child(1),
+.grid-sections section:nth-child(2) {
+  border-bottom: 1.5px solid #033989; 
+}
+
+.grid-sections section:nth-child(1),
+.grid-sections section:nth-child(3) {
+  border-right: 1.5px solid #033989; 
+}
+
+/* 背景色整体切换 */
+body.dark-mode {
+  background-color: #EA5031;
+  color: #f0f0f0;
+}
+
+html.dark-mode{
+  background-color: #f0f0f0;
+}
+
+/* header */
+body.dark-mode header {
+  background-color: #EA5031;
+  border-bottom: 2px solid #033989;
+}
+
+/* grid layout 区域背景 */
+body.dark-mode .grid-layout {
+  background-color: #033989;
+}
+
+/* grid section box */
+body.dark-mode .grid-sections section {
+  background-color: #033989;
+  border-color: #EA5031;
+}
+
+/* 标题 / section number */
+body.dark-mode .section-number,
+body.dark-mode .section-content h3 {
+  color: #EA5031;
+}
+
+/* 普通链接 */
+body.dark-mode a {
+  color: #EA5031;
+}
+
+body.dark-mode a:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+#banner h2,
+#banner h4 {
+position: absolute;
+font-family: "Roboto", sans-serif;
+color: #EA5031;
+font-size: 70px;
+font-weight: 800;
+z-index: 1;
+transition: transform 0.8s ease, opacity 0.6s ease;
 }
 
 /* 默认位置 */
 #banner h2 {
-  transform: translate(120%, 0);
-  top: 140px;
+transform: translate(120%, 0);
+top: 140px;
 }
 
 #banner h4 {
-  transform: translate(5%, 0);
-  bottom: 15px;
+transform: translate(5%, 0);
+bottom: 15px;
 }
 
 /* Dark mode 滑出效果 */
 body.dark-mode #banner h2 {
-  transform: translate(10%, 0);
+transform: translate(10%, 0);
 }
 
 body.dark-mode #banner h4 {
-  transform: translate(100%, 0);
+transform: translate(100%, 0);
 }
 
-  
-  
-  
-  * {
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  /* 按钮本体 */
-button {
-    width: 60px;
-    height: 30px;
-    border-radius: 30px;
-    background-color: #033989;
-    border: 2px solid #033989;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.4s ease, border-color 0.4s ease;
-    padding: 0;
-    left: 90%;
-    top: 20px;
 
-  }
-  
-  /* 白色小圆点 */
+
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 按钮本体 */
+button {
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #033989;
+  border: 2px solid #033989;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+  padding: 0;
+  left: 90%;
+  top: 20px;
+
+}
+
+/* 白色小圆点 */
 button .circle {
-    width: 22px;
-    height: 22px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 4px;
-    transition: left 0.4s ease;
-  }
-  
-  /* Dark mode 时按钮颜色变化 */
-  body.dark-mode button {
-    background-color: #EA5031;
-    border-color: #EA5031;
-  }
-  
-  /* Dark mode 时圆点滑到右边 */
-  body.dark-mode button .circle {
-    left: 32px;
-  }
-  
+  width: 22px;
+  height: 22px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  transition: left 0.4s ease;
+}
+
+/* Dark mode 时按钮颜色变化 */
+body.dark-mode button {
+  background-color: #EA5031;
+  border-color: #EA5031;
+}
+
+/* Dark mode 时圆点滑到右边 */
+body.dark-mode button .circle {
+  left: 32px;
+}
