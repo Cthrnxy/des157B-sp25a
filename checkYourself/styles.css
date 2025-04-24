@@ -1,0 +1,57 @@
+body{
+    background-image: url(images/background.png);
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+#table{
+    position: fixed;
+    background-color: rgb(63, 15, 15);
+    width: 100%;
+    height: 200px;
+    position: sticky;
+    padding: 2%;
+    bottom: 0%; 
+    z-index: 0;
+    margin-top:80% ;
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+    width: 100px;
+    background-color: rgb(250, 204, 53);
+    border: solid 1px black;
+    border-radius: 10px;
+    font-family:"Playwrite RO", cursive ;
+    text-align: center;
+    display:inline-block ;
+}
+
+section img{
+    position: absolute;
+    z-index: 2;
+    width: 120%;
+    height: 60%;
+    bottom: 110px;
+    left: -100px;
+}
+
+h1{
+    width: 85%;
+    padding: 3%;
+    background-color: rgb(39, 12, 12);
+    margin: auto;
+    color: white;
+    border: solid white;
+    text-align: center;
+    border-radius: 20px;
+    font-family: "Winky Rough", sans-serif;
+    font-weight: 100;
+    font-size: 2em;
+    margin-top: 20px;
+}
