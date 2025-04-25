@@ -1,7 +1,7 @@
 [
     { "day": "Monday", "cups": 2 },
     { "day": "Tuesday", "cups": 1 },
-    { "day": "Wednesday", "cups": 0 },
+    { "day": "Wednesday", "cups": 1 },
     { "day": "Thursday", "cups": 0 },
     { "day": "Friday", "cups": 2 },
     { "day": "Saturday", "cups": 0 },

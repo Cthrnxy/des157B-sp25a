@@ -9,49 +9,139 @@ html, body {
   
 
 #table{
-    position: fixed;
     background-color: rgb(63, 15, 15);
     width: 100%;
-    height: 200px;
-    position: sticky;
-    padding: 2%;
-    bottom: 0%; 
-    z-index: 0;
-    margin-top:80% ;
+    height: 50vw;
+    margin: 0;
+    padding: 0;
 }
 
 button{
     padding: 10px;
     margin: 10px;
-    width: 100px;
-    background-color: rgb(250, 204, 53);
-    border: solid 1px black;
-    border-radius: 10px;
+    width: 150px;
+    background: linear-gradient(to bottom, #d6aa7c, #a97450);
+    color: white;
+    border-radius: 12px;
+    border: none;
     font-family:"Playwrite RO", cursive ;
     text-align: center;
     display:inline-block ;
+    font-weight: 800;
+    box-shadow: 0 4px #6f4e37;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-section img{
-    position: absolute;
-    z-index: 2;
-    width: 120%;
-    height: 60%;
-    bottom: 110px;
-    left: -100px;
+
+  #table button:hover {
+    background: linear-gradient(to bottom, #c4976b, #8b5e3c);
+    transform: translateY(2px);
+    box-shadow: 0 2px #6f4e37;
+  }
+  
+
+section{
+    display: flex;
+    margin-top: 100px;
+    padding: 0;
+    margin-bottom: 0;
+    justify-content: center;
+}
+
+#machine img{
+    width: 50vw;
+    height: 50vw;
+}
+
+@keyframes popIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes popOut {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  
+  #coffee img {
+    width: 50px;
+    margin: 5px;
+    animation: popIn 0.5s ease forwards;
+  }
+  
+
+#coffee img{
+    width: 15vw;
+    margin-top: 25vw;
+    transform: scale(0);
+    animation: popIn 0.4s forwards;
+
+}
+
+#coffee{
+    width: 150px;
+    display: flex;
 }
 
 h1{
-    width: 85%;
-    padding: 3%;
+    width: 70%;
+    padding: 30px;
     background-color: rgb(39, 12, 12);
     margin: auto;
     color: white;
     border: solid white;
     text-align: center;
-    border-radius: 20px;
+    max-width:800px ;
+    border-radius: 60px;
     font-family: "Winky Rough", sans-serif;
     font-weight: 100;
     font-size: 2em;
     margin-top: 20px;
 }
+
+@media (min-width: 900px) {
+    #table{
+        padding: 50px;
+        height: 100px;
+    }
+
+    #machine img{
+        width: 400px;
+        height: 400px;
+    }
+    
+    #coffee img{
+        width: 150px;
+        margin-top: 150px;
+    
+    }
+    section{
+        margin-top:50px ;
+    }
+
+    #table{
+        display: flex;
+        justify-content: center;
+    }
+
+    #coffee{
+        width: 200px;
+        display: flex;
+    }
+  }
