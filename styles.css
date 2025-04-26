@@ -229,7 +229,7 @@ transform: translate(100%, 0);
 }
 
 /* 按钮本体 */
-button {
+#switch {
   width: 60px;
   height: 30px;
   border-radius: 30px;
@@ -245,7 +245,7 @@ button {
 }
 
 /* 白色小圆点 */
-button .circle {
+#switch .circle {
   width: 22px;
   height: 22px;
   background-color: white;
@@ -257,12 +257,28 @@ button .circle {
 }
 
 /* Dark mode 时按钮颜色变化 */
-body.dark-mode button {
+body.dark-mode #switch {
   background-color: #EA5031;
   border-color: #EA5031;
 }
 
 /* Dark mode 时圆点滑到右边 */
-body.dark-mode button .circle {
+body.dark-mode #switch .circle {
   left: 32px;
+}
+
+#music{
+  color: #033989;
+  position: relative;
+  left: 80%;
+  top: 18px;
+  border: none;
+}
+
+#music i{
+  font-size: 25px;
+}
+
+body.dark-mode #music{
+  background-color: #EA5031;
 }

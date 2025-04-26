@@ -9,5 +9,17 @@
     body.classList.toggle('dark-mode');
     html.classList.toggle('dark-mode');
   });
+  const playButton = document.getElementById('music');
+const bgMusic = document.getElementById('fx');
+
+playButton.addEventListener('click', () => {
+  if (bgMusic.paused) {
+    bgMusic.play();
+  } else {
+    bgMusic.pause();
+    
+  }
+});
+
 })();
 
