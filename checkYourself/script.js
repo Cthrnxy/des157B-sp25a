@@ -22,7 +22,7 @@
 
                 for (let i=0; i<cups; i++){
                     const img =document.querySelector('img');
-                    img.setAttribute('src', 'images/cup.PNG');
+                    img.setAttribute('src', 'checkYourself/images/cup.PNG');
                     coffeeDiv.appendChild(img);
                 }
             });
