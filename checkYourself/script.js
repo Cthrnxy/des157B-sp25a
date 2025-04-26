@@ -10,7 +10,7 @@
         const dataArray = await theData.json();
         const cupsData = {};
         dataArray.forEach(entry=>{
-            cupsData[entry.day]=entry,cups;
+            cupsData[entry.day]=entry.cups;
         })
 
         buttons.forEach(button=>{
@@ -21,16 +21,18 @@
                 coffeeDiv.innerHTML=''; //clear the cups
 
                 for (let i=0; i<cups; i++){
-                    const img =document.querySelector('img');
+                    const img = document.createElement('img');
                     img.setAttribute('src', 'images/cup.png');
                     coffeeDiv.appendChild(img);
                 }
             });
 
             button.addEventListener('mouseleave',()=>{
-                cups.forEach(cups=>{
-                    cups.addEventListener('animationend',()=>{
-                        cups.remove();
+                const cupImages = coffeeDiv.querySelectorAll('img'); // 👈 正确选取所有img
+                cupImages.forEach(cup => {
+                    cup.style.animation = 'popOut 0.5s ease forwards';
+                    cup.addEventListener('animationend', () => {
+                        cup.remove();
                     })
                 })
             })
