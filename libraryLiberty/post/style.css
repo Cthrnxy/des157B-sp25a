@@ -1,0 +1,225 @@
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.italiana-regular {
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+/* header */
+
+header{
+  display: flex;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+
+header h1{
+  font-family: "Italiana", sans-serif;
+  font-size: 2.5em;
+  margin: 20px;
+}
+
+#mainnav{
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+#mainnav li ul{
+  position: absolute;
+  right: -9999px;
+}
+
+#mainnav li:hover ul{
+  display: block;
+  right: -10px;
+  position: absolute;
+  background-color: white;
+
+}
+
+#mainnav li ul{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#mainnav li{
+  display: block;
+}
+
+#mainnav li a img{
+  width: 30px;
+  height: 30px;
+}
+
+#mainnav2{
+  display: none;
+}
+
+#mainnav>li>ul>li>a{
+  display: block;
+  font-family: "Lato", sans-serif;
+  background: white;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+}
+
+#mainnav>li>ul>li>a:hover{
+  background-color: rgb(32, 32, 32);
+  color: white;
+
+}
+
+/* -------------------------------------- */
+.holder{
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  margin: 20px;
+  height: 600px;
+}
+
+.picture {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1.5em;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  width: 250px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button a{
+  text-decoration: none;
+  color: #fff;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+section{
+  flex: 1;
+  padding: 20px;
+}
+
+footer{
+  display: flex;
+  background-color: black;
+  margin-top: auto;
+}
+
+footer>p{
+  font-family: "Italiana", sans-serif;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 3%;
+}
+
+address{
+  font-family: "Italiana", sans-serif;
+  color: #ffffff;
+  display: flex;
+  margin: 3%;
+  font-size: 20px;
+}
+
+address .Contact a i{
+  color: white;
+  margin-right: 10px;
+}
+
+
+
+
+
+@media only screen and (min-width: 600px){
+  #mainnav{
+    display: none;
+  }
+
+  header{
+    position: relative;
+  }
+
+  #mainnav2{
+    display: block;
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+  }
+
+  #mainnav2 ul{
+    display: flex;
+  }
+
+  #mainnav2 ul li{
+    display: block;
+  }
+
+  #mainnav2 ul li a{
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+    color: black;
+    margin: 10px;
+  }
+/* ------------------------------------------- */
+  section{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  section div{
+    display: block;
+    width:300px ;
+    height: 500px;
+    
+  }
+
+
+}
+  

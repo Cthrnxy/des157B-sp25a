@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- fontlist -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barrio&family=Italiana&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+    <!-- add the link to leaflet css here -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+    <!-- add the link to the leaflet js here -->
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- font awesone icons -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="script.js" defer></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel in Shanghai</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Travel in Shanghai</h1>
+
+        <nav>
+            <ul id="mainnav">
+
+                <li>
+                    <a href="#"><i id="navicon" class="fa-solid fa-bars"></i></a>
+
+                    <ul class="submenu">
+
+                        <li><a href="./post/restaurant.html">RESTAURANT</a></li>
+
+                        <li><a href="./post/scenicspot.html">SCENIC SPOT</a></li>
+
+                        <li><a href="./post/store.html">STORE</a></li>
+
+                        <li><a href="./post/cafe.html">CAFE</a></li>
+
+                        <li><a href="./post/transportation.html">TRANSPORTATION</a></li>
+
+                    </ul>
+
+                </li>
+            </ul>
+        </nav>
+
+        <nav>
+            <ul id="mainnav-desktop">
+
+                <li><a href="./post/restaurant.html">RESTAURANT</a></li>
+
+                <li><a href="./post/scenicspot.html">SCENIC SPOT</a></li>
+
+                <li><a href="./post/store.html">STORE</a></li>
+
+                <li><a href="./post/cafe.html">CAFE</a></li>
+
+                <li><a href="./post/transportation.html">TRANSPORTATION</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div id="intro" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        <p>Welcome to Shanghai ! Scroll down to check the district area!</p>
+    </div>
+    <section class="gap"></section>
+    <section class="district">
+
+        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Huangpu District</div>
+        <ul data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+            <li><a href="https://you.ctrip.com/shopping/2/4380529.html">Sinan Bookshop</a></li>
+            <li><a href="https://you.ctrip.com/food/2/22298246.html#ctm_ref=www_hp_bs_lst">Metal Hand Coffee</a>
+            </li>
+            <li><a href="https://you.ctrip.com/food/2/134086763.html">ZARI Korean Bistro</a></li>
+            <li><a href="https://you.ctrip.com/food/2/25042345.html#ctm_ref=www_hp_bs_lst">B&C Butterful and
+                    Creamorous</a></li>
+            <li><a href="https://you.ctrip.com/sight/shanghai2/736.html?renderPlatform=">The Bund</a></li>
+            <li><a href="https://you.ctrip.com/sight/shanghai2/740.html?renderPlatform=#ctm_ref=www_hp_bs_lst">Yu
+                    Garden</a></li>
+            <li><a href="https://www.liuliusa.com/">Liuli China Museum</a></li>
+            <li><a href="https://www.paradoxmuseumshanghai.com/en/">Paradox Museum</a></li>
+            <li><a href="https://you.ctrip.com/sight/shanghai2/3739.html?renderPlatform=#ctm_ref=www_hp_bs_lst">Nanjing
+                    Road</a></li>
+            <li><a href="https://you.ctrip.com/food/2/144908588.html">Xieshanghuang Crab Noodle</a></li>
+        </ul>
+    </section>
+
+    <section class="gap"></section>
+
+    <section class="district">
+
+        <div id="order1" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Jingan District</div>
+        <ul data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+            <li><a href="https://you.ctrip.com/food/2/136413409.html#ctm_ref=www_hp_bs_lst">Plus One Coffee</a></li>
+            <li><a href="https://you.ctrip.com/food/2/24951270.html#ctm_ref=www_hp_bs_lst">Fine Fan Zakka &
+                    Canteen</a></li>
+            <li><a href="https://you.ctrip.com/food/2/25042336.html#ctm_ref=www_hp_bs_lst">Pain Chaud Bakery</a>
+            </li>
+            <li><a href="https://you.ctrip.com/food/2/25033629.html#ctm_ref=www_hp_bs_lst">Dip in Gelato</a></li>
+            <li><a href="https://you.ctrip.com/food/2/132091943.html#ctm_ref=www_hp_bs_lst">Coffee Spot</a></li>
+        </ul>
+        <div id="order2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Jingan District</div>
+    </section>
+
+
+    <section class="gap"></section>
+    <section class="district">
+        <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Pudong District</div>
+        <ul data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+            <li><a href="https://www.museumofartpd.org.cn/en/index">Pudong Art Museum</a></li>
+            <li><a href="https://you.ctrip.com/sight/shanghai2/110724.html?renderPlatform=#ctm_ref=www_hp_bs_lst">Himalayas
+                    Museum</a></li>
+            <li><a href="https://you.ctrip.com/sight/shanghai2/762.html?renderPlatform=#ctm_ref=www_hp_bs_lst">Oriental
+                    Pearl Tower</a></li>
+            <li><a href="https://www.taikooliqiantan.com/en/aboutus.html">Taikoo Li Qiantan</a></li>
+            <li><a href="https://you.ctrip.com/food/2/132095442.html#ctm_ref=www_hp_bs_lst">NUDAKE Dessert</a></li>
+        </ul>
+    </section>
+    <section class="gap"></section>
+
+
+
+    <div id="imgMap">
+        <div id="map" data-aos="fade-down"></div>
+        <div id="info" data-aos="fade-down">
+            <img id="infoImage" alt="Place image" src="">
+            <h2 id="title"></h2>
+            <a id="more" href="">About More</a>
+        </div>
+    </div>
+
+
+
+
+
+
+    <footer>
+        <p>Designed by Xixi</p>
+        <address>
+            <div class="Contact"><a href="mailto:xctyang@ucdavis.edu"><i class="fa-solid fa-envelope"></i></a><i
+                    class="fa-brands fa-instagram"></i></div>
+        </address>
+
+    </footer>
+</body>
+
+</html>

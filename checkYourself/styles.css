@@ -32,6 +32,7 @@ button{
     box-shadow: 0 4px #6f4e37;
     cursor: pointer;
     transition: all 0.2s ease;
+    height: 80px;
 }
 
 
@@ -120,7 +121,7 @@ h1{
 @media (min-width: 900px) {
     #table{
         padding: 50px;
-        height: 100px;
+        height: 120vw;
     }
 
     #machine img{
