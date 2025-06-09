@@ -81,8 +81,13 @@
 
         let currentLadyDialog = 0;
 
+        /* out button */
+        const outside = document.getElementById('outside');
+        const final = document.getElementById('final');
+        const playAgain = document.getElementById('playAgain');
 
-        
+
+
 
 
 
@@ -134,6 +139,7 @@
                         context1.style.display = 'none';
                         nextBtn.style.display = 'none';
                         titleImg.style.display = 'none'
+                        outside.style.display = "block"
                     }, 7500);
 
                 });
@@ -194,12 +200,22 @@
                     ladydialog.style.display = 'none';
                     nextBtn2.style.display = 'none';
                     prevBtn2.style.display = 'none'
+                    bg3.style.display = 'block';
                 });
 
                 /* talk with lady and play the game  */
 
                 lady.addEventListener('click', () => {
-                    currentLadyDialog = 0; // 从第一张开始
+                    // 👇 这段是新加的，隐藏老人游戏相关 UI
+                    houseBg.style.display = 'none';
+                    elder2.style.display = 'none';
+                    houseGallery.style.display = 'none';
+                    close4.style.display = 'none';
+                    elderDialog.style.display = 'none';
+                    outside.style.display='none'
+
+                    // 原来的代码继续...
+                    currentLadyDialog = 0;
                     ladydialog.src = ladyDialogImages[currentLadyDialog];
                     ladydialog.style.display = 'block';
                     nextBtn3.style.display = 'block';
@@ -207,7 +223,7 @@
                     lady.style.display = 'none';
                     fishman0.style.display = 'none';
                     elder.style.display = 'none';
-                    closeBtn3.style.display = 'block'
+                    closeBtn3.style.display = 'block';
                 });
 
                 nextBtn3.addEventListener('click', () => {
@@ -253,17 +269,15 @@
                     restartGameBtn.style.display = 'none'
                     finalScoreText.style.display = 'none'
                     hud.style.display = 'none'
-                });
-
-                closeBtn3?.addEventListener('click', () => {
-                    if (ladydialog) ladydialog.style.display = 'none';
-                    if (nextBtn3) nextBtn3.style.display = 'none';
-                    if (prevBtn3) prevBtn3.style.display = 'none';
-                    if (lady) lady.style.display = 'block';
-                    if (fishman0) fishman0.style.display = 'block';
-                    if (elder) elder.style.display = 'block';
-                    if (closeBtn3) closeBtn3.style.display = 'none';
-                    if (startGameBtn) startGameBtn.style.display = 'none';
+                    bg3.style.display = 'block';
+                    field1.style.display = 'none'
+                    field2.style.display = 'none'
+                    field3.style.display = 'none'
+                    field4.style.display = 'none'
+                    fishRod.style.display = 'none'
+                    hotel.style.display = 'none'
+                    jewlery.style.display = 'none'
+                    outside.style.display='block'
                 });
 
 
@@ -408,17 +422,15 @@
                     prevBtn3.style.display = 'none';
                     startGameBtn.style.display = 'none';
                     bg3.style.display = 'none';
-                    closeBtn3.style.display = 'none'
+                    closeBtn3.style.display = 'none';
 
-                    ladyScene.forEach(item => {
-                        item.style.display = 'block';
-                    });
-
+                    ladyScene.forEach(item => item.style.display = 'block');
                     hud.style.display = 'block';
-                    startScreen.style.display = 'none'; // ✅ 应该隐藏开始面板
+                    startScreen.style.display = 'none';
 
                     startGame();
                 });
+
 
 
 
@@ -433,6 +445,7 @@
                 const prv4 = document.getElementById('prv4');
                 const close4 = document.getElementById('close4');
                 const startGameBtn1 = document.getElementById('startGameBtn1');
+                const close5 = document.getElementById('close5');
 
 
                 // ---- 2) 准备预对话图片数组 ----
@@ -487,6 +500,7 @@
                     elder.style.display = 'none';
                     lady.style.display = 'none';
                     fishman0.style.display = 'none';
+                    outside.style.display='none'
 
                     // 显示预对话轮播
                     currentElderDialog = 0;
@@ -494,6 +508,8 @@
                     elderDialog.style.display = 'block';
                     next4.style.display = 'block';
                     prv4.style.display = 'none';
+                    close5.style.display = 'block'
+
                 });
 
                 // ---- 5) 预对话“下一步” ----
@@ -518,7 +534,23 @@
                         next4.style.display = 'block';
                         if (currentElderDialog === 0) prv4.style.display = 'none';
                         startGameBtn1.style.display = 'none'
+
                     }
+                    close5.style.display = 'none'
+
+                });
+
+                close5.addEventListener('click', () => {
+                    elderDialog.style.display = 'none';
+                    next4.style.display = 'none';
+                    prv4.style.display = 'none';
+                    lady.style.display = 'block';
+                    fishman0.style.display = 'block';
+                    elder.style.display = 'block';
+                    closeBtn3.style.display = 'none'
+                    startGameBtn1.style.display = 'none'
+                    bg3.style.display = 'block';
+                    outside.style.display='block'
                 });
 
                 close4.addEventListener('click', () => {
@@ -535,6 +567,8 @@
                     houseBg.style.display = 'none';
                     document.getElementById('elderDialogBox').style.display = 'none';
                     document.getElementById('elderDialog').style.display = 'none';
+                    bg3.style.display = 'block';
+                    outside.style.display='block'
 
 
                 });
@@ -547,6 +581,7 @@
                     prv4.style.display = 'none';
                     close4.style.display = 'block';
                     startGameBtn1.style.display = 'none'
+                    close5.style.display = 'none'
 
                     // 启动拖房子游戏
                     elder2.style.display = 'block';
@@ -555,16 +590,50 @@
 
                 });
 
+                outside.addEventListener('click', () => {
+                    // 1. 隐藏所有人物和互动元素
+                    fishman2.style.display = 'none';
+                    fishman0.style.display = 'none';
+                    child.style.display = 'none';
 
+                    ladydialog.style.display = 'none';
+                    next4.style.display = 'none';
+                    prv4.style.display = 'none';
+                    close4.style.display = 'none';
+                    startGameBtn1.style.display = 'none';
+                    outside.style.display = 'none';
 
+                    // 2. 显示渔夫离开动画
+                    const fishmanFinal = document.getElementById('fishmanFinal');
+                    fishmanFinal.style.display = 'block';
+                    fishmanFinal.classList.remove('move-fishman0-back'); // 重置动画
+                    void fishmanFinal.offsetWidth; // 触发重绘
+                    fishmanFinal.classList.add('move-fishman0-back');
 
+                    // 3. 动画播放完后再切换背景和显示结尾
+                    fishmanFinal.addEventListener('animationend', function handleEnd() {
+                        // 清理动画类 & 监听器
+                        fishmanFinal.classList.remove('move-fishman0-back');
+                        fishmanFinal.style.display = 'none';
+                        fishmanFinal.removeEventListener('animationend', handleEnd);
 
+                        // 切换背景 & 显示最终画面
+                        bg1.style.display = 'block';
+                        bg2.style.display = 'none';
+                        bg3.style.display = 'none';
+                        bg4.style.display = 'none';
+                        lady.style.display = 'none';
+                        elder.style.display = 'none';
+                        final.style.display = 'block';
+                        final.style.opacity = '1';
+                        playAgain.style.display = 'block';
+                        playAgain.style.opacity = '1';
+                    });
+                });
 
-
-
-
-
-
+                playAgain.addEventListener('click', () => {
+                    location.reload();
+                });
 
 
 

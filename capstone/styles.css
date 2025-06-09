@@ -155,6 +155,19 @@ body {
     }
 }
 
+
+
+@keyframes fadeSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
 #context1 {
     display: block;
     position: absolute;
@@ -167,7 +180,9 @@ body {
 }
 
 #dialogImg,
-#ladyDialog,#resultDialog,#elderDialog{
+#ladyDialog,
+#resultDialog,
+#elderDialog {
     position: absolute;
     top: 40%;
     left: 25%;
@@ -192,6 +207,9 @@ body {
 .move-fishman2 {
     animation: move-fishman2 5.5s forwards ease-in;
 }
+
+
+
 
 /* lady scene */
 
@@ -239,6 +257,16 @@ body {
     left: 25.5%;
 }
 
+#hotel:hover,
+#fishRod:hover,
+#jewlery:hover,
+#field1:hover,
+#field2:hover,
+#field3:hover,
+#field4:hover {
+    transform: scale(1.03);
+}
+
 #fishRod {
     width: 8%;
     top: 62%;
@@ -255,12 +283,12 @@ body {
     transition: opacity 0.4s ease, transform 0.4s ease;
     pointer-events: none;
     z-index: 999;
-  }
-  
-  .popup-icon.show {
+}
+
+.popup-icon.show {
     opacity: 1;
     transform: translateY(-10px);
-  }
+}
 
 
 
@@ -295,27 +323,30 @@ body {
     font-size: 4vh;
     font-family: 'Gugi', sans-serif;
     color: white;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.4);
     padding: 2% 2%;
     border-radius: 10px;
     z-index: 9999;
     display: none;
-    
-  }
+
+}
 
 
-  #startScreen {
+#startScreen {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
     width: 100vw;
-    height: 100vh; /* 确保 startScreen 全屏显示 */
+    height: 100vh;
+    /* 确保 startScreen 全屏显示 */
     display: none;
-  }
-  
-  #startGameBtn, #restartGameBtn,#startGameBtn1{
+}
+
+#startGameBtn,
+#restartGameBtn,
+#startGameBtn1 {
     position: absolute;
     bottom: 14%;
     left: 53%;
@@ -329,19 +360,20 @@ body {
     border: none;
     font-family: 'Gugi', sans-serif;
     display: none;
-    box-shadow:1px 1px 1px #5E434C;
+    box-shadow: 1px 1px 1px #5E434C;
     z-index: 11;
-  }
+}
 
-  #startGameBtn:hover,#startGameBtn1:hover{
-    box-shadow:none;
-  }
-  
-
-  
+#startGameBtn:hover,
+#startGameBtn1:hover {
+    box-shadow: none;
+}
 
 
-  #finalScoreText{
+
+
+
+#finalScoreText {
     position: absolute;
     font-family: 'Gugi', sans-serif;
     bottom: 30%;
@@ -350,10 +382,10 @@ body {
     color: #563535;
     font-size: 4vh;
     display: none;
-  }
-  
-  
-  
+}
+
+
+
 
 @keyframes move-fishman2 {
     0% {
@@ -389,10 +421,26 @@ body {
     opacity: 0;
 }
 
+#next:hover {
+    transform: scale(1.2);
+}
+
+#next2:hover,
+#next3:hover,
+#next4:hover,
+#prv2:hover,
+#prv3:hover,
+#prv4:hover {
+    transform: scale(1.2);
+}
+
 
 #next2,
-#prv2,#prv3,
-#next3,#next4,#prv4 {
+#prv2,
+#prv3,
+#next3,
+#next4,
+#prv4 {
     display: none;
     font-size: 4.5vh;
     position: absolute;
@@ -403,16 +451,21 @@ body {
 }
 
 #next2,
-#next3,#next4 {
+#next3,
+#next4 {
     right: 22%;
 }
 
-#prv2,#prv3,#prv4{
+#prv2,
+#prv3,
+#prv4 {
     left: 26.5%;
 }
 
 
-#close2,#close3{
+#close2,
+#close3,
+#close5 {
     display: none;
     font-size: 3.5vh;
     position: absolute;
@@ -423,6 +476,12 @@ body {
     color: #563535;
 }
 
+#close2:hover,
+#close3:hover,
+#close5:hover {
+    transform: scale(1.2);
+}
+
 
 
 
@@ -431,16 +490,23 @@ body {
     bottom: 6%;
     left: 46%;
     z-index: 11;
-    background: none;
+    background: #FFF98B;
     border: none;
     font-size: 2.5vh;
+    font-family: 'Gugi', sans-serif;
+    color: #5E434C;
+    width: 12vh;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #5E434C;
+    padding: 0.5%;
 
 }
 
 
 
+
 #start:hover {
-    text-decoration: underline;
+    box-shadow: none;
 }
 
 #child {
@@ -459,6 +525,12 @@ body {
     width: 5%;
     display: none;
     z-index: 10;
+}
+
+#elder:hover,
+#lady:hover,
+#child:hover {
+    transform: scale(1.05);
 }
 
 #lady {
@@ -483,7 +555,7 @@ body {
     width: 80%;
     position: absolute;
     top: 0;
-    left:12%;
+    left: 12%;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -526,7 +598,7 @@ body {
     z-index: 16;
 }
 
-#elderDialogBox:hover{
+#elderDialogBox:hover {
     box-shadow: none;
 }
 
@@ -538,12 +610,12 @@ body {
     font-family: 'Gugi', sans-serif;
 }
 
-#close4{
+#close4 {
     position: absolute;
     width: 15vh;
     text-align: center;
     padding: 1%;
-    font-size:2vh;
+    font-size: 2vh;
     background-color: #FFF98B;
     color: #342323;
     border: none;
@@ -552,17 +624,56 @@ body {
     font-family: 'Gugi', sans-serif;
     z-index: 17;
     top: 2%;
-    box-shadow:1px 1px 1px #5E434C;
+    box-shadow: 1px 1px 1px #5E434C;
     right: 15%;
     display: none;
 }
 
-#close4:hover{
+#close4:hover {
+    box-shadow: none;
+}
+
+#final {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeSlideDown 2s ease-out forwards;
+}
+
+#playAgain{
+    position: absolute;
+    width: 18vh;
+    text-align: center;
+    padding: 1%;
+    font-size: 2vh;
+    background-color: #FFF98B;
+    color: #342323;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Gugi', sans-serif;
+    z-index: 17;
+    bottom: 30%;
+    box-shadow: 1px 1px 1px #5E434C;
+    right: 45%;
+    display: block;
+    transform: translateY(-50px);
+    animation: fadeSlideDown 2s ease-out forwards;
+    display: none;
+    opacity: 0;
+}
+
+#playAgain:hover {
     box-shadow: none;
 }
 
 
-#elder2{
+#elder2 {
     position: absolute;
     width: 12%;
     display: block;
@@ -571,3 +682,50 @@ body {
     left: 20%;
     display: none;
 }
+
+
+#outside {
+    display: none;
+    position: absolute;
+    right: 14%;
+    top: 7%;
+    width: 7%;
+}
+
+#outside:hover {
+    transform: scale(1.05);
+}
+
+#fishmanFinal{
+    position: absolute;
+    width: 9%;
+    top: 25%;
+    right: 13%;
+    display: none;
+}
+
+@keyframes move-fishman0-back {
+    0% {
+      transform: translate(-8vh, 4vh) scale(1.5);
+      opacity: 1;
+    }
+  
+    50% {
+      transform: translate(-4vh, 2vh) scale(1);
+      opacity: 0.8;
+    }
+  
+    100% {
+      transform: translate(0, 0) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  .move-fishman0-back {
+    animation: move-fishman0-back 3s forwards ease-in-out;
+    position: absolute;
+  }
+  
+  
+  
+  
