@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Gugi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+
+    <script src="script.js" defer></script>
+
+    <title>Peach Blossom Spring</title>
+</head>
+
+<body>
+    <div id="screen">
+
+        <img src="images/greenIntro.png" alt="bg1" class="bg" id="bg1">
+        <img src="images/pinkIntro.png" alt="bg2" class="bg" id="bg2">
+        <img src="images/mainChild.png" alt="bg3" class="bg" id="bg3">
+        <img src="images/mainLady.png" alt="bg4" class="bg" id="bg4">
+
+
+        <div class="container">
+
+            <!-- intro -->
+
+            <img src="images/title.png" alt="title" id="title">
+            <img src="images/littleMountain.png" alt="mountain" id="mountain">
+            <img src="images/fishman1.gif" alt="fishmanIntro" id="fishmanIntro">
+            <button id="start">START</button>
+            <!-- ------------ -->
+            <!-- intro context -->
+            <img src="images/context1.png" alt="context1" id="context1">
+            <i id="next" class="fa-solid fa-caret-right"></i>
+            <!-- ------------ -->
+            <!-- scene1 fisherman into the village talk with child -->
+            <img src="images/child.png" alt="child" id="child">
+            <img src="images/fishman2.png" alt="fishman2" id="fishman2">
+            <img id="dialogImg" src="images/dialog0.png" alt="Dialog Image">
+            <i id="close2" class="fa-solid fa-xmark"></i>
+            <i id="next2" class="fa-solid fa-caret-right"></i>
+            <i id="prv2" class="fa-solid fa-caret-left"></i>
+            <!----------------->
+            <!-- scene2 fisherman meet elder and lady -->
+            <img id="elder" src="images/elder.png" alt="elder">
+            <img id="lady" src="images/lady.png" alt="lady">
+            <img id="fishman0" src="images/fishman.png" alt="fishman0">
+            <!-- fisherman talk with lady and play the game -->
+            <i id="next3" class="fa-solid fa-caret-right"></i>
+            <i id="prv3" class="fa-solid fa-caret-left"></i>
+            <i id="close3" class="fa-solid fa-xmark"></i>
+            <img id="ladyDialog" src="images/ladyDialog1.png" alt="ladyDialog">
+            <img src="images/field1.png" alt="field1" id="field1" class="ladyScene">
+            <img src="images/field2.png" alt="field2" id="field2" class="ladyScene">
+            <img src="images/field3.png" alt="field3" id="field3" class="ladyScene">
+            <img src="images/field4.png" alt="field4" id="field4" class="ladyScene">
+            <img src="images/jewlery.png" alt="jewlery" id="jewlery" class="ladyScene">
+            <img src="images/hotel.png" alt="hotel" id="hotel" class="ladyScene">
+            <img src="images/fishing.png" alt="fishRod" id="fishRod" class="ladyScene">
+            <img id="popupIcon" src="images/yuanbao.png" class="popup-icon" style="display: none;">
+            <div id="hud">
+                <div id="timer">Time: 10</div>
+                <div id="score">Score: 0 Liang</div>
+            </div>
+            <button id="startGameBtn">Let's go !</button>
+            <div id="startScreen"></div>
+
+            <img id="resultDialog" src="images/ladyGameResult.png" alt="result">
+            <div id="finalScoreText">0 Liang</div>
+            <button id="restartGameBtn">Play again !</button>
+
+            <!-- elder draggable house game -->
+            <!-- 拖拽游戏 -->
+            <div id="houseGallery" style="display: none;">
+                <img src="images/house1.png" class="houseOption" data-id="house1" alt="House 1">
+                <img src="images/house2.png" class="houseOption" data-id="house2" alt="House 2">
+            </div>
+
+            <div id="elderDialogBox" style="display: none;">
+                <p id="elderDialogText"></p>
+                
+            </div>
+            <button id="close4">CLOSE</button>
+            <img id="elder2" src="images/elder.png" alt="elder">
+            <div id="houseBg"></div>
+            <img id="elderDialog" src="images/elderDialog0.png" alt="elderDialog">
+            <i id="next4" class="fa-solid fa-caret-right"></i>
+            <i id="prv4" class="fa-solid fa-caret-left"></i>
+            <button id="startGameBtn1">Let's go !</button>
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
