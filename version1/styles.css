@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+#screen {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+.bg {
+    height: 100vh;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#bg1{z-index: 4;}
+#bg2{z-index: 3;}
+#bg3{z-index: 2;}
+#bg4{z-index: 1;}
+
+#rice,#fish,#water,#yuanbao{
+    position:absolute;
+    top:180px;
+    left:320px;
+    display:block;
+    width:80px;
+}
+
+.container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh;
+    aspect-ratio: 32 / 15;
+    z-index: 10;
+    overflow: hidden;
+}
+
+#title {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    left: 30%;
+    top: 15%;
+    z-index: 11;
+    opacity: 1;
+
+}
+
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+#mountain {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    width: 28%;
+    z-index: 10;
+}
+
+.move-mountain {
+  animation: mountainMove 2s forwards ease-in-out;
+}
+
+@keyframes mountainMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(280px); }
+}
+
+#fishmanIntro {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    width:15%;
+    z-index: 10;
+}
+
+.move-fishman{
+    animation: fishmanMoving 5.5s forwards ease-in;
+}
+
+@keyframes fishmanMoving {
+  0% {
+    transform: translate(0, 0) scale(1) scaleX(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(9vh, -9vh) scale(0.85) scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(27vh, -18vh) scale(0.7) scaleX(1);
+    opacity: 1;
+  }
+  75% {
+    transform: translate(18vh, -27vh) scale(0.55) scaleX(-1); /* 水平翻转 */
+    opacity: 1;
+  }
+  90% {
+    transform: translate(18vh, -28vh) scale(0.4) scaleX(1); /* 水平翻转 */
+    opacity: 1;
+  }
+  100% {
+    transform: translate(20vh, -29vh) scale(0.3) scaleX(1); /* 翻回来 */
+    opacity: 0;
+  }
+}
+
+#context1 {
+    display: block;
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    width:50%;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#dialogImg,#ladyDialog {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width:55%;
+    z-index: 10;
+    transition: opacity 1s ease-in-out;
+    display: none;
+}
+
+
+#fishman2 {
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: 13%;
+    width:5%;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.move-fishman2{
+    animation: move-fishman2 5.5s forwards ease-in;
+}
+
+/* lady scene */
+
+.ladyScene{
+    display: none;
+    position: absolute;
+}
+
+
+
+#field1{
+    width: 20%;
+    top: 54%;
+    left: 37%;
+    
+}
+
+#field2{
+    width: 19%;
+    top: 39%;
+    left: 26%;
+}
+
+#field3{
+    width: 15%;
+    top: 31%;
+    left: 43%;
+}
+
+#field4{
+    width: 17%;
+    top: 43%;
+    left: 54%;
+}
+
+#jewlery{
+    width: 16.5%;
+    top: 8%;
+    left: 13.5%;
+}
+
+#hotel{
+    width: 14%;
+    top: 3.5%;
+    left: 25.5%;
+}
+
+#fishRod{
+    width: 8%;
+    top: 62%;
+    left: 23%;
+}
+
+.field-hover {
+    cursor: url('images/bottle.ico') 16 16, pointer;
+  }
+  
+  /* 鼠标变水瓶（倒水） */
+  .field-click {
+    cursor: url('images/waterBottle.ico') 16 16, pointer;
+  }
+
+@keyframes move-fishman2 {
+  0% {
+    transform: translate(0, 0) scale(1) ;
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-4vh, 2vh) scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-8vh,4vh) scale(2);
+    opacity: 1;
+  }
+  
+}
+
+
+
+
+
+#next{
+    font-size: 4.5vh;
+    display: block;
+    position: absolute;
+    top: 72%;
+    right: 26%;
+    z-index: 11;
+    transition: opacity 1s ease-in-out;
+    color: rgb(86, 53, 53);
+    opacity: 0;
+}
+
+
+#next2,#prv,#next3{
+    display: none;
+    font-size: 4.5vh;
+    position: absolute;
+    top: 74%;
+    z-index: 11;
+    transition: opacity 1s ease-in-out;
+    color: rgb(86, 53, 53);
+}
+
+#next2,#next3{
+    right: 22%;
+}
+
+#prv{
+    left: 26.5%;
+}
+
+
+#close{
+    display: none;
+    font-size: 3.5vh;
+    position: absolute;
+    top: 65%;
+    right: 24%;
+    z-index: 11;
+    transition: opacity 1s ease-in-out;
+    color: #563535;
+}
+
+
+
+#start {
+    position: absolute;
+    bottom: 6%;
+    left: 46%;
+    z-index: 11;
+    background: none;
+    border: none;
+    font-size: 2.5vh;
+
+}
+
+
+
+#start:hover {
+    text-decoration: underline;
+}
+
+#child{
+    position: absolute;
+    width: 5%;
+    top: 40%;
+    left: 48%;
+    opacity: 0;
+}
+
+#elder,#lady,#fishman0{
+    position: absolute;
+    width: 5%;
+    display: none;
+}
+
+#lady{
+    left: 52%;
+    top: 36%;
+}
+
+#elder{
+    top: 39%;
+    left: 46%;
+}
+
+#fishman0{
+    width: 7%;
+    top: 39%;
+    left: 36%;
+}
+
+
+
+/* @keyframe movesmall {
+    from {
+        transform: translateY(0px) scale(1);
+    }
+
+    to {
+        transform: translateY(200px) scale(0.5);
+    }
+}
+
+新的 [0:40] .Imgaeanimation {
+    animation: movesmall 5s ease-out forwards;
+} */
+
+/* @keyframe movesmall {
+    from {
+        transform: translateY(0px) scale(1);
+    }
+
+    to {
+        transform: translateY(200px) scale(0.5);
+    }
+}
+
+[0:40] .Imgaeanimation {
+    animation: movesmall 5s ease-out forwards;
+}
+
+[0:41] classlist.add('.imgaeanimation');
+
+新的 [0:43] if else statement [0:45] setTimeout(()=> {
+        console.log;
+    }
+
+    , 1000);
+
+
+消息@Tinygod716 */
